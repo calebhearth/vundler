@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+verbose=""
+clean=""
+basecommand="+BundleInstall"
+vimfile="$HOME/.vimrc.bundles"
+while getopts vcfu: OPTION
+do
+  case $OPTION in
+    v) verbose="+qall";;
+    c) clean="+BundleClean";;
+    f) basecommand=$basecommand!;;
+    u) vimfile="$OPTARG";;
+  esac
+done
+
+echo "vim -u $vimfile $basecommand $clean $verbose"
