@@ -5,7 +5,7 @@ require 'vundler/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "vundler"
-  gem.version       = Vundler::VERSION
+  gem.version       = "0.1.0"
   gem.authors       = ["Caleb Thompson"]
   gem.email         = ["cjaysson@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
